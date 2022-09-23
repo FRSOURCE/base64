@@ -1,0 +1,52 @@
+{
+  "name": "@frsource/base64",
+  "version": "1.0.0",
+  "description": "base64 encoder/decoder with UTF-8 support 📔",
+  "scripts": {
+    "build": "del-cli dist && microbundle index.js --target node -f cjs,modern",
+    "prettify": "prettier --write index.js",
+    "prettify:ci": "prettier --check index.js",
+    "prepack": "pnpm build",
+    "release": "semantic-release",
+    "release:ci": "pnpm release --yes",
+    "release:test": "pnpm release --no-git-tag-version --no-push --skip-npm"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./*": "./*.js"
+  },
+  "keywords": [
+    "base64",
+    "utf-8",
+    "encoder",
+    "decoder",
+    "webtoolkit",
+    "webtoolkit.base64"
+  ],
+  "author": "Jakub Freisler <jakub.freisler@frsource.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "del-cli": "^5.0.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ]
+}
