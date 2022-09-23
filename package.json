@@ -2,6 +2,7 @@
   "name": "@frsource/base64",
   "version": "1.0.0",
   "description": "base64 encoder/decoder with UTF-8 support 📔",
+  "repository": "https://github.com/FRSOURCE/base64.git",
   "scripts": {
     "build": "del-cli dist && microbundle index.js --target node -f cjs,modern",
     "prettify": "prettier --write index.js",
