@@ -13,22 +13,21 @@ const _keyStr =
  *
  * @param {string} input - Text to encode
  */
-exports.encode = function (input) {
+export const encode = (input: string) => {
   let output = "";
-  let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
   let i = 0;
 
   input = _utf8_encode(input);
 
   while (i < input.length) {
-    chr1 = input.charCodeAt(i++);
-    chr2 = input.charCodeAt(i++);
-    chr3 = input.charCodeAt(i++);
+    const chr1 = input.charCodeAt(i++);
+    const chr2 = input.charCodeAt(i++);
+    const chr3 = input.charCodeAt(i++);
 
-    enc1 = chr1 >> 2;
-    enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
-    enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
-    enc4 = chr3 & 63;
+    const enc1 = chr1 >> 2;
+    const enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+    let enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+    let enc4 = chr3 & 63;
 
     if (isNaN(chr2)) {
       enc3 = enc4 = 64;
@@ -52,23 +51,21 @@ exports.encode = function (input) {
  *
  * @param {string} input - Text to decode
  */
-exports.decode = function (input) {
+export const decode = (input: string) => {
   let output = "";
-  let chr1, chr2, chr3;
-  let enc1, enc2, enc3, enc4;
   let i = 0;
 
   input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
   while (i < input.length) {
-    enc1 = _keyStr.indexOf(input.charAt(i++));
-    enc2 = _keyStr.indexOf(input.charAt(i++));
-    enc3 = _keyStr.indexOf(input.charAt(i++));
-    enc4 = _keyStr.indexOf(input.charAt(i++));
+    const enc1 = _keyStr.indexOf(input.charAt(i++));
+    const enc2 = _keyStr.indexOf(input.charAt(i++));
+    const enc3 = _keyStr.indexOf(input.charAt(i++));
+    const enc4 = _keyStr.indexOf(input.charAt(i++));
 
-    chr1 = (enc1 << 2) | (enc2 >> 4);
-    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
-    chr3 = ((enc3 & 3) << 6) | enc4;
+    const chr1 = (enc1 << 2) | (enc2 >> 4);
+    const chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+    const chr3 = ((enc3 & 3) << 6) | enc4;
 
     output = output + String.fromCharCode(chr1);
 
@@ -90,7 +87,7 @@ exports.decode = function (input) {
  * @private
  * @param {string} string - Text to encode
  */
-function _utf8_encode(string) {
+function _utf8_encode(string: string) {
   string = string.replace(/\r\n/g, "\n");
   let utftext = "";
 
@@ -120,24 +117,23 @@ function _utf8_encode(string) {
  * @private
  * @param {string} utftext - UTF-8 text to dencode
  */
-function _utf8_decode(utftext) {
+function _utf8_decode(utftext: string) {
   let string = "";
   let i = 0;
-  let c = (c1 = c2 = 0);
 
   while (i < utftext.length) {
-    c = utftext.charCodeAt(i);
+    const c = utftext.charCodeAt(i);
 
     if (c < 128) {
       string += String.fromCharCode(c);
       i++;
     } else if (c > 191 && c < 224) {
-      c2 = utftext.charCodeAt(i + 1);
+      const c2 = utftext.charCodeAt(i + 1);
       string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
       i += 2;
     } else {
-      c2 = utftext.charCodeAt(i + 1);
-      c3 = utftext.charCodeAt(i + 2);
+      const c2 = utftext.charCodeAt(i + 1);
+      const c3 = utftext.charCodeAt(i + 2);
       string += String.fromCharCode(
         ((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63)
       );

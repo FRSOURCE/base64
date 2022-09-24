@@ -5,9 +5,9 @@
   "repository": "https://github.com/FRSOURCE/base64.git",
   "homepage": "http://www.webtoolkit.info/javascript_base64.html",
   "scripts": {
-    "build": "del-cli dist && microbundle index.js --target node -f cjs,modern",
-    "prettify": "prettier --write index.js",
-    "prettify:ci": "prettier --check index.js",
+    "build": "del-cli dist && microbundle index.ts --target node -f cjs,modern",
+    "prettify": "prettier --write index.ts",
+    "prettify:ci": "prettier --check index.ts",
     "prepack": "pnpm build",
     "release": "semantic-release",
     "release:ci": "pnpm release --yes",
