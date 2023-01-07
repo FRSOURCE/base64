@@ -6,7 +6,7 @@ specifiers:
   '@semantic-release/npm': 9.0.1
   del-cli: 5.0.0
   microbundle: 0.15.1
-  prettier: 2.8.0
+  prettier: 2.8.2
   semantic-release: 19.0.5
 
 devDependencies:
@@ -15,7 +15,7 @@ devDependencies:
   '@semantic-release/npm': 9.0.1_semantic-release@19.0.5
   del-cli: 5.0.0
   microbundle: 0.15.1
-  prettier: 2.8.0
+  prettier: 2.8.2
   semantic-release: 19.0.5
 
 packages:
@@ -4492,8 +4492,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.8.0:
-    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
+  /prettier/2.8.2:
+    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
