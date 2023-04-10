@@ -39,7 +39,7 @@
     "@semantic-release/npm": "10.0.3",
     "del-cli": "5.0.0",
     "microbundle": "0.15.1",
-    "prettier": "2.8.4",
+    "prettier": "2.8.7",
     "semantic-release": "21.0.1"
   },
   "publishConfig": {
