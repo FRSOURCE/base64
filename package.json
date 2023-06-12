@@ -36,11 +36,11 @@
   "devDependencies": {
     "@semantic-release/commit-analyzer": "10.0.1",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "10.0.3",
+    "@semantic-release/npm": "10.0.4",
     "del-cli": "5.0.0",
     "microbundle": "0.15.1",
     "prettier": "2.8.8",
-    "semantic-release": "21.0.3"
+    "semantic-release": "21.0.5"
   },
   "publishConfig": {
     "access": "public"
