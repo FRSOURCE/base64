@@ -40,7 +40,7 @@
     "del-cli": "5.0.1",
     "microbundle": "0.15.1",
     "prettier": "2.8.8",
-    "semantic-release": "21.0.9"
+    "semantic-release": "21.1.1"
   },
   "publishConfig": {
     "access": "public"
