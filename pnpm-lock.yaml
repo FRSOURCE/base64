@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@semantic-release/commit-analyzer':
-    specifier: 10.0.2
-    version: 10.0.2(semantic-release@21.1.1)
+    specifier: 10.0.4
+    version: 10.0.4(semantic-release@21.1.1)
   '@semantic-release/git':
     specifier: 10.0.1
     version: 10.0.1(semantic-release@21.1.1)
@@ -1598,8 +1598,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@semantic-release/commit-analyzer@10.0.2(semantic-release@21.1.1):
-    resolution: {integrity: sha512-GtHlzWj1SZlckcgjk3IQDlnykcJYiWNB9kowLET8tVh4SjzxPxmuja57DtvUn/tGRf1l5X1jtmuqCdCqObI3CQ==}
+  /@semantic-release/commit-analyzer@10.0.4(semantic-release@21.1.1):
+    resolution: {integrity: sha512-pFGn99fn8w4/MHE0otb2A/l5kxgOuxaaauIh4u30ncoTJuqWj4hXTgEJ03REqjS+w1R2vPftSsO26WC61yOcpw==}
     engines: {node: '>=18'}
     peerDependencies:
       semantic-release: '>=20.1.0'
@@ -5111,7 +5111,7 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
-      '@semantic-release/commit-analyzer': 10.0.2(semantic-release@21.1.1)
+      '@semantic-release/commit-analyzer': 10.0.4(semantic-release@21.1.1)
       '@semantic-release/error': 4.0.0
       '@semantic-release/github': 9.0.2(semantic-release@21.1.1)
       '@semantic-release/npm': 10.0.5(semantic-release@21.1.1)
