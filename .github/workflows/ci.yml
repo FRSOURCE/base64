@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2.4.0
         with:
           version: 7.8.0
@@ -31,7 +31,7 @@ jobs:
     needs: cache
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2.4.0
         with:
           version: 7.8.0
@@ -51,7 +51,7 @@ jobs:
     needs: [cache, lint]
     if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
