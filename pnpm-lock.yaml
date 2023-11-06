@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@semantic-release/commit-analyzer':
-    specifier: 11.0.0
-    version: 11.0.0(semantic-release@22.0.7)
+    specifier: 11.1.0
+    version: 11.1.0(semantic-release@22.0.7)
   '@semantic-release/git':
     specifier: 10.0.1
     version: 10.0.1(semantic-release@22.0.7)
@@ -1695,8 +1695,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@semantic-release/commit-analyzer@11.0.0(semantic-release@22.0.7):
-    resolution: {integrity: sha512-uEXyf4Z0AWJuxI9TbSQP5kkIYqus1/E1NcmE7pIv6d6/m/5EJcNWAGR4FOo34vrV26FhEaRVkxFfYzp/M7BKIg==}
+  /@semantic-release/commit-analyzer@11.1.0(semantic-release@22.0.7):
+    resolution: {integrity: sha512-cXNTbv3nXR2hlzHjAMgbuiQVtvWHTlwwISt60B+4NZv01y/QRY7p2HcJm8Eh2StzcTJoNnflvKjHH/cjFS7d5g==}
     engines: {node: ^18.17 || >=20.6.1}
     peerDependencies:
       semantic-release: '>=20.1.0'
@@ -1705,7 +1705,7 @@ packages:
       conventional-commits-filter: 4.0.0
       conventional-commits-parser: 5.0.0
       debug: 4.3.4
-      import-from: 4.0.0
+      import-from-esm: 1.0.3
       lodash-es: 4.17.21
       micromatch: 4.0.5
       semantic-release: 22.0.7
@@ -3224,6 +3224,11 @@ packages:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
+    dev: true
+
+  /import-from-esm@1.0.3:
+    resolution: {integrity: sha512-bncoEU7L4Vi5OoeygZuBUP9IC1AxavLR4UMCwZ9FtujOhDG1PDEo7IpCdfeOxKfrMCGwoK6UXpF9q/cXTA/ejg==}
+    engines: {node: '>=16.20'}
     dev: true
 
   /import-from@3.0.0:
@@ -5122,7 +5127,7 @@ packages:
     engines: {node: ^18.17 || >=20.6.1}
     hasBin: true
     dependencies:
-      '@semantic-release/commit-analyzer': 11.0.0(semantic-release@22.0.7)
+      '@semantic-release/commit-analyzer': 11.1.0(semantic-release@22.0.7)
       '@semantic-release/error': 4.0.0
       '@semantic-release/github': 9.0.2(semantic-release@22.0.7)
       '@semantic-release/npm': 11.0.1(semantic-release@22.0.7)
