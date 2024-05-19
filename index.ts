@@ -6,7 +6,7 @@
  **/
 
 const _keyStr =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
 /**
  * Encodes given string.
@@ -14,7 +14,7 @@ const _keyStr =
  * @param {string} input - Text to encode
  */
 export const encode = (input: string) => {
-  let output = "";
+  let output = '';
   let i = 0;
 
   input = _utf8_encode(input);
@@ -52,10 +52,10 @@ export const encode = (input: string) => {
  * @param {string} input - Text to decode
  */
 export const decode = (input: string) => {
-  let output = "";
+  let output = '';
   let i = 0;
 
-  input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+  input = input.replace(/[^A-Za-z0-9+/=]/g, '');
 
   while (i < input.length) {
     const enc1 = _keyStr.indexOf(input.charAt(i++));
@@ -88,8 +88,8 @@ export const decode = (input: string) => {
  * @param {string} string - Text to encode
  */
 function _utf8_encode(string: string) {
-  string = string.replace(/\r\n/g, "\n");
-  let utftext = "";
+  string = string.replace(/\r\n/g, '\n');
+  let utftext = '';
 
   for (let n = 0; n < string.length; n++) {
     const c = string.charCodeAt(n);
@@ -118,7 +118,7 @@ function _utf8_encode(string: string) {
  * @param {string} utftext - UTF-8 text to dencode
  */
 function _utf8_decode(utftext: string) {
-  let string = "";
+  let string = '';
   let i = 0;
 
   while (i < utftext.length) {

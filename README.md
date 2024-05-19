@@ -35,7 +35,6 @@ import { encode, decode } from '@frsource/base64';
 // legacy javscript
 const { encode, decode } = require('@frsource/base64');
 
-
 const encoded = encode('我喜欢解码lubię dekodować');
 console.log(encoded); // output: 5oiR5Zac5qyi6Kej56CBbHViacSZIGRla29kb3dhxIc=
 const decoded = decode(encoded);
