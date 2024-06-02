@@ -15,8 +15,8 @@ importers:
         specifier: 1.9.0
         version: 1.9.0(eslint@9.3.0)
       '@frsource/semantic-release-config':
-        specifier: 1.8.0
-        version: 1.8.0(semantic-release@23.1.1(typescript@5.4.5))
+        specifier: 1.9.0
+        version: 1.9.0(semantic-release@23.1.1(typescript@5.4.5))
       del-cli:
         specifier: 5.1.0
         version: 5.1.0
@@ -708,8 +708,8 @@ packages:
     peerDependencies:
       eslint: '>= 3'
 
-  '@frsource/semantic-release-config@1.8.0':
-    resolution: {integrity: sha512-koWBwCWtZCfQkuV/lRQKjS779OTqyrlEoihjrM4FPgnEv/CTqvBZmSJNEeBD0O8rODXyoKlHeXVPXMEqi1hpPA==}
+  '@frsource/semantic-release-config@1.9.0':
+    resolution: {integrity: sha512-cmgB8AuYoQugWfXhg1XJ3WkCgRFdf2BHbGv5MplCWGErFeDVZNv43IqqjF6KYMz3VljrGwaroofEbnte8egi9Q==}
     peerDependencies:
       semantic-release: '>= 23'
 
@@ -4511,7 +4511,7 @@ snapshots:
     dependencies:
       eslint: 9.3.0
 
-  '@frsource/semantic-release-config@1.8.0(semantic-release@23.1.1(typescript@5.4.5))':
+  '@frsource/semantic-release-config@1.9.0(semantic-release@23.1.1(typescript@5.4.5))':
     dependencies:
       '@semantic-release/changelog': 6.0.3(semantic-release@23.1.1(typescript@5.4.5))
       '@semantic-release/commit-analyzer': 11.1.0(semantic-release@23.1.1(typescript@5.4.5))
