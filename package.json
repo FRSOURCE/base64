@@ -33,7 +33,7 @@
   ],
   "author": "Jakub Freisler <jakub.freisler@frsource.org>",
   "license": "MIT",
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.7.1",
   "devDependencies": {
     "@frsource/eslint-config": "1.13.0",
     "@frsource/prettier-config": "1.9.0",
