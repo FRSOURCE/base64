@@ -81,7 +81,7 @@ export const decode = (input: string) => {
  */
 function _utf8_encode(str: string): string {
   return encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) =>
-    String.fromCharCode(parseInt(p1, 16))
+    String.fromCharCode(parseInt(p1, 16)),
   );
 }
 
@@ -92,16 +92,10 @@ function _utf8_encode(str: string): string {
  * @param {string} utftext - UTF-8 text to dencode
  */
 function _utf8_decode(str: string): string {
-  try {
-    return decodeURIComponent(
-      str
-        .split('')
-        .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
-        .join('')
-    );
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed to decode utf-8 base64 string: ', error);
-    return str;
-  }
+  return decodeURIComponent(
+    str
+      .split('')
+      .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+      .join(''),
+  );
 }
