@@ -12,8 +12,7 @@ jobs:
     name: CI cache
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
         with:
           run_install: false
@@ -25,12 +24,11 @@ jobs:
         run: pnpm i
 
   lint:
-    name: lint
+    name: Check linting
     runs-on: ubuntu-latest
     needs: cache
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
         with:
           run_install: false
@@ -40,8 +38,24 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm i
-      - name: Prettify
-        run: pnpm lint
+      - run: pnpm lint
+
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    needs: cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4.0.0
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm i
+      - run: pnpm test
 
   build-and-release:
     name: build and release
