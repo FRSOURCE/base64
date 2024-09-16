@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* update utf8 encoding and decoding implementation to make it compatible with 4 bytes unicode ([#89](https://github.com/FRSOURCE/base64/issues/89)) ([7534308](https://github.com/FRSOURCE/base64/commit/7534308d9224c378868b162e3f85b8f95cd79b84))
+* update utf8 encoding and decoding implementation to make it compatible with 4 bytes unicode ([#89](https://github.com/FRSOURCE/base64/issues/89)) ([7534308](https://github.com/FRSOURCE/base64/commit/7534308d9224c378868b162e3f85b8f95cd79b84)) (contribution by [@backrunner](https://github.com/backrunner) 🎉 )
 
 ## [1.0.77](https://github.com/FRSOURCE/base64/compare/v1.0.76...v1.0.77) (2024-09-16)
 
