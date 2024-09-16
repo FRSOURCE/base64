@@ -47,7 +47,7 @@
     "globals": "15.9.0",
     "microbundle": "0.15.1",
     "prettier": "3.3.3",
-    "semantic-release": "24.1.0",
+    "semantic-release": "24.1.1",
     "typescript": "5.5.4",
     "vitest": "2.1.1"
   },
