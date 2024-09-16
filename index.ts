@@ -1,10 +1,3 @@
-/**
- *
- *  Base64 encode / decode
- *  http://www.webtoolkit.info/
- *
- **/
-
 const _keyStr =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
@@ -67,18 +60,17 @@ export const decode = (input: string) => {
     const chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
     const chr3 = ((enc3 & 3) << 6) | enc4;
 
-    output = output + String.fromCharCode(chr1);
+    output += String.fromCharCode(chr1);
 
-    if (enc3 != 64) {
-      output = output + String.fromCharCode(chr2);
+    if (enc3 !== 64) {
+      output += String.fromCharCode(chr2);
     }
-
-    if (enc4 != 64) {
-      output = output + String.fromCharCode(chr3);
+    if (enc4 !== 64) {
+      output += String.fromCharCode(chr3);
     }
   }
 
-  return (output = _utf8_decode(output));
+  return _utf8_decode(output);
 };
 
 /**
@@ -87,28 +79,10 @@ export const decode = (input: string) => {
  * @private
  * @param {string} string - Text to encode
  */
-function _utf8_encode(string: string) {
-  string = string.replace(/\r\n/g, '\n');
-  let utftext = '';
-
-  for (let n = 0; n < string.length; n++) {
-    const c = string.charCodeAt(n);
-
-    if (c < 128) {
-      utftext += String.fromCharCode(c);
-    } else if (c > 127 && c < 2048) {
-      utftext +=
-        String.fromCharCode((c >> 6) | 192) +
-        String.fromCharCode((c & 63) | 128);
-    } else {
-      utftext +=
-        String.fromCharCode((c >> 12) | 224) +
-        String.fromCharCode(((c >> 6) & 63) | 128) +
-        String.fromCharCode((c & 63) | 128);
-    }
-  }
-
-  return utftext;
+function _utf8_encode(str: string): string {
+  return encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) =>
+    String.fromCharCode(parseInt(p1, 16)),
+  );
 }
 
 /**
@@ -117,28 +91,11 @@ function _utf8_encode(string: string) {
  * @private
  * @param {string} utftext - UTF-8 text to dencode
  */
-function _utf8_decode(utftext: string) {
-  let string = '';
-  let i = 0;
-
-  while (i < utftext.length) {
-    const c = utftext.charCodeAt(i);
-
-    if (c < 128) {
-      string += String.fromCharCode(c);
-      i++;
-    } else if (c > 191 && c < 224) {
-      const c2 = utftext.charCodeAt(i + 1);
-      string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
-      i += 2;
-    } else {
-      const c2 = utftext.charCodeAt(i + 1);
-      const c3 = utftext.charCodeAt(i + 2);
-      string += String.fromCharCode(
-        ((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63),
-      );
-      i += 3;
-    }
-  }
-  return string;
+function _utf8_decode(str: string): string {
+  return decodeURIComponent(
+    str
+      .split('')
+      .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+      .join(''),
+  );
 }

@@ -23,7 +23,7 @@ it('should encode / decode characters outide of Latin1 range', () => {
   expect(decoded).toBe(input);
 });
 
-it.skip('should encode / decode emojis', () => {
+it('should encode / decode emojis', () => {
   const input = '🩵🩵🩵🩵🩵🩵';
   const expected = '8J+ptfCfqbXwn6m18J+ptfCfqbXwn6m1';
 
