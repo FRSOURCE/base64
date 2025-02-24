@@ -44,7 +44,7 @@
     "@vitest/ui": "3.0.5",
     "del-cli": "6.0.0",
     "eslint": "9.19.0",
-    "globals": "15.14.0",
+    "globals": "15.15.0",
     "microbundle": "0.15.1",
     "prettier": "3.4.2",
     "semantic-release": "24.2.3",
