@@ -15,8 +15,8 @@ importers:
         specifier: 1.22.0
         version: 1.22.0(eslint@9.19.0)
       '@frsource/semantic-release-config':
-        specifier: 1.41.0
-        version: 1.41.0(semantic-release@24.2.3(typescript@5.7.3))
+        specifier: 1.53.0
+        version: 1.53.0(semantic-release@24.2.3(typescript@5.7.3))
       '@vitest/coverage-v8':
         specifier: ^3.0.0
         version: 3.0.8(vitest@3.0.8)
@@ -892,8 +892,8 @@ packages:
     peerDependencies:
       eslint: '>= 3'
 
-  '@frsource/semantic-release-config@1.41.0':
-    resolution: {integrity: sha512-WNt6k6p2mifANmJu+2TLUrdUhZ5v1T2a0K01vnPT7xVqKWzjs/NV9AQzmB2y907uo0xZEe5I9CmIDGSmisGptw==}
+  '@frsource/semantic-release-config@1.53.0':
+    resolution: {integrity: sha512-xhd153MhwIKaeSh7qKA8MDApZ9rhna2f4nvzd9xC2PYuTT2KkK+WBFOOAH1JVKh8cwhGTXy3LNtlNQxiGBO1YA==}
     peerDependencies:
       semantic-release: '>= 24'
 
@@ -4913,7 +4913,7 @@ snapshots:
     dependencies:
       eslint: 9.19.0
 
-  '@frsource/semantic-release-config@1.41.0(semantic-release@24.2.3(typescript@5.7.3))':
+  '@frsource/semantic-release-config@1.53.0(semantic-release@24.2.3(typescript@5.7.3))':
     dependencies:
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.3(typescript@5.7.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.3(typescript@5.7.3))
@@ -5241,7 +5241,7 @@ snapshots:
       read-pkg: 9.0.1
       registry-auth-token: 5.0.2
       semantic-release: 24.2.3(typescript@5.7.3)
-      semver: 7.6.3
+      semver: 7.7.1
       tempy: 3.1.0
 
   '@semantic-release/release-notes-generator@14.0.3(semantic-release@24.2.3(typescript@5.7.3))':
@@ -5352,7 +5352,7 @@ snapshots:
       fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.3
+      semver: 7.7.1
       ts-api-utils: 1.4.3(typescript@5.7.3)
       typescript: 5.7.3
     transitivePeerDependencies:
@@ -5746,7 +5746,7 @@ snapshots:
       conventional-commits-filter: 5.0.0
       handlebars: 4.7.8
       meow: 13.2.0
-      semver: 7.6.3
+      semver: 7.7.1
 
   conventional-commits-filter@5.0.0: {}
 
@@ -6957,7 +6957,7 @@ snapshots:
     dependencies:
       hosted-git-info: 7.0.1
       is-core-module: 2.13.1
-      semver: 7.6.3
+      semver: 7.7.1
       validate-npm-package-license: 3.0.4
 
   normalize-range@0.1.2: {}
