@@ -15,8 +15,8 @@ importers:
         specifier: 1.25.0
         version: 1.25.0(eslint@9.23.0)
       '@frsource/semantic-release-config':
-        specifier: 1.55.0
-        version: 1.55.0(semantic-release@24.2.3(typescript@5.8.3))
+        specifier: 1.59.0
+        version: 1.59.0(semantic-release@24.2.3(typescript@5.8.3))
       '@vitest/coverage-v8':
         specifier: ^3.0.0
         version: 3.0.9(vitest@3.0.9)
@@ -912,8 +912,8 @@ packages:
     peerDependencies:
       eslint: '>= 3'
 
-  '@frsource/semantic-release-config@1.55.0':
-    resolution: {integrity: sha512-SvQPdVtZHegpBMy+zBHbEDPZf3jOujUYgG8nIkrSlNhSMxhPwiMw5OYZof3bydFh30rFRFwxYE4z3hZJQAprNA==}
+  '@frsource/semantic-release-config@1.59.0':
+    resolution: {integrity: sha512-nJ8jye1tXIZ4C1pcYKA+nbK8NTIpLNFSkNri51HkmiSkV9y5i81wyw6VtVmrng1bgNxRRB4fkwR5vP85nlY4yw==}
     peerDependencies:
       semantic-release: '>= 24'
 
@@ -5036,7 +5036,7 @@ snapshots:
     dependencies:
       eslint: 9.23.0
 
-  '@frsource/semantic-release-config@1.55.0(semantic-release@24.2.3(typescript@5.8.3))':
+  '@frsource/semantic-release-config@1.59.0(semantic-release@24.2.3(typescript@5.8.3))':
     dependencies:
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.3(typescript@5.8.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.3(typescript@5.8.3))
@@ -7314,7 +7314,7 @@ snapshots:
 
   parse-json@8.1.0:
     dependencies:
-      '@babel/code-frame': 7.23.5
+      '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
       type-fest: 4.10.3
 
