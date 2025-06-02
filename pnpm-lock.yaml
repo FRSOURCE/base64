@@ -15,8 +15,8 @@ importers:
         specifier: 1.29.0
         version: 1.29.0(prettier@3.5.3)
       '@frsource/semantic-release-config':
-        specifier: 1.69.0
-        version: 1.69.0(semantic-release@24.2.5(typescript@5.8.3))
+        specifier: 1.71.0
+        version: 1.71.0(semantic-release@24.2.5(typescript@5.8.3))
       '@vitest/coverage-v8':
         specifier: ^3.0.0
         version: 3.1.4(vitest@3.1.4)
@@ -926,8 +926,8 @@ packages:
     peerDependencies:
       prettier: '>= 3'
 
-  '@frsource/semantic-release-config@1.69.0':
-    resolution: {integrity: sha512-/vlAWtAAaYo4vy9AUxh6PCrpBIM0JuLB0JtYSc0hCgb3YIm2E1h54hg5AQAfa2s7ubyTQEWjXbUte8xh7oDOvw==}
+  '@frsource/semantic-release-config@1.71.0':
+    resolution: {integrity: sha512-pB4rs17UuzU8zhk13w2Zp8J/Okfu8yVik51wJzqwAjfvUe0W/Or3a1C77Wyuqv3eqNIqqeJ/kI4d84lZdu+tbg==}
     peerDependencies:
       semantic-release: '>= 24'
 
@@ -5127,7 +5127,7 @@ snapshots:
     dependencies:
       prettier: 3.5.3
 
-  '@frsource/semantic-release-config@1.69.0(semantic-release@24.2.5(typescript@5.8.3))':
+  '@frsource/semantic-release-config@1.71.0(semantic-release@24.2.5(typescript@5.8.3))':
     dependencies:
       '@semantic-release/changelog': 6.0.3(semantic-release@24.2.5(typescript@5.8.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.5(typescript@5.8.3))
@@ -5217,7 +5217,7 @@ snapshots:
       '@octokit/graphql': 9.0.1
       '@octokit/request': 10.0.2
       '@octokit/request-error': 7.0.0
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       before-after-hook: 4.0.0
       universal-user-agent: 7.0.2
 
@@ -5228,7 +5228,7 @@ snapshots:
 
   '@octokit/endpoint@11.0.0':
     dependencies:
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       universal-user-agent: 7.0.2
 
   '@octokit/graphql@8.0.1':
@@ -5240,7 +5240,7 @@ snapshots:
   '@octokit/graphql@9.0.1':
     dependencies:
       '@octokit/request': 10.0.2
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       universal-user-agent: 7.0.2
 
   '@octokit/openapi-types@20.0.0': {}
@@ -5272,7 +5272,7 @@ snapshots:
     dependencies:
       '@octokit/core': 7.0.2
       '@octokit/request-error': 7.0.0
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       bottleneck: 2.19.5
 
   '@octokit/plugin-throttling@10.0.0(@octokit/core@6.0.1)':
@@ -5284,7 +5284,7 @@ snapshots:
   '@octokit/plugin-throttling@11.0.1(@octokit/core@7.0.2)':
     dependencies:
       '@octokit/core': 7.0.2
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       bottleneck: 2.19.5
 
   '@octokit/request-error@6.1.7':
@@ -5293,13 +5293,13 @@ snapshots:
 
   '@octokit/request-error@7.0.0':
     dependencies:
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
 
   '@octokit/request@10.0.2':
     dependencies:
       '@octokit/endpoint': 11.0.0
       '@octokit/request-error': 7.0.0
-      '@octokit/types': 14.0.0
+      '@octokit/types': 14.1.0
       fast-content-type-parse: 3.0.0
       universal-user-agent: 7.0.2
 
