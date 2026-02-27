@@ -12,6 +12,17 @@ it('should encode / decode simple characters', () => {
   expect(decoded).toBe(input);
 });
 
+it('should encode / decode newline characters', () => {
+  const input = '\n';
+  const expected = 'Cg==';
+
+  const encoded = encode(input);
+  expect(encoded).toBe(expected);
+
+  const decoded = decode(encoded);
+  expect(decoded).toBe(input);
+});
+
 it('should encode / decode characters outide of Latin1 range', () => {
   const input = '我喜欢解码lubię dekodować';
   const expected = '5oiR5Zac5qyi6Kej56CBbHViacSZIGRla29kb3dhxIc=';
