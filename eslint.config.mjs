@@ -1,7 +1,7 @@
 import { typescript } from '@frsource/eslint-config';
 import globals from 'globals';
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
   ...typescript,
   { ignores: ['**/dist', '**/coverage', '**/node_modules'] },
