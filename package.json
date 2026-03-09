@@ -43,7 +43,7 @@
     "@vitest/coverage-v8": "^4.0.0",
     "@vitest/ui": "4.0.18",
     "del-cli": "7.0.0",
-    "eslint": "10.0.2",
+    "eslint": "10.0.3",
     "globals": "17.4.0",
     "microbundle": "0.15.1",
     "prettier": "3.8.1",
