@@ -1,3 +1,16 @@
+## [1.0.208](https://github.com/FRSOURCE/base64/compare/v1.0.207...v1.0.208) (2026-06-25)
+
+## [1.0.207](https://github.com/FRSOURCE/base64/compare/v1.0.206...v1.0.207) (2026-06-25)
+
+## [1.0.206](https://github.com/FRSOURCE/base64/compare/v1.0.205...v1.0.206) (2026-06-25)
+
+## [1.0.205](https://github.com/FRSOURCE/base64/compare/v1.0.204...v1.0.205) (2026-06-25)
+
+
+### Bug Fixes
+
+* replace microbundle with tsup and allow esbuild build script ([67308fb](https://github.com/FRSOURCE/base64/commit/67308fb52646dfe47e8f68a54c3888eda01f1e0c))
+
 ## [1.0.204](https://github.com/FRSOURCE/base64/compare/v1.0.203...v1.0.204) (2026-03-30)
 
 ## [1.0.203](https://github.com/FRSOURCE/base64/compare/v1.0.202...v1.0.203) (2026-03-30)

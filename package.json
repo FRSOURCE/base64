@@ -1,11 +1,11 @@
 {
   "name": "@frsource/base64",
-  "version": "1.0.204",
+  "version": "1.0.208",
   "description": "base64 encoder/decoder with UTF-8 support 📔",
   "repository": "https://github.com/FRSOURCE/base64.git",
   "homepage": "http://www.webtoolkit.info/javascript_base64.html",
   "scripts": {
-    "build": "del-cli dist && microbundle index.ts --target node -f cjs,modern",
+    "build": "tsup",
     "lint": "eslint . && prettier . --check",
     "fix": "pnpm eslint --fix && prettier . --write",
     "prepack": "pnpm build",
@@ -41,15 +41,15 @@
     "@frsource/prettier-config": "1.42.0",
     "@frsource/semantic-release-config": "1.106.0",
     "@vitest/coverage-v8": "^4.0.0",
-    "@vitest/ui": "4.1.2",
+    "@vitest/ui": "4.1.9",
     "del-cli": "7.0.0",
     "eslint": "10.1.0",
     "globals": "17.4.0",
-    "microbundle": "0.15.1",
-    "prettier": "3.8.1",
-    "semantic-release": "25.0.3",
+    "tsup": "8.5.1",
+    "prettier": "3.8.4",
+    "semantic-release": "25.0.5",
     "typescript": "5.9.3",
-    "vitest": "4.1.2"
+    "vitest": "4.1.9"
   },
   "publishConfig": {
     "access": "public"
@@ -60,5 +60,10 @@
     "README.md",
     "LICENSE"
   ],
-  "funding": "https://buymeacoffee.com/frsource"
+  "funding": "https://buymeacoffee.com/frsource",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
