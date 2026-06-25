@@ -46,7 +46,7 @@
     "eslint": "10.1.0",
     "globals": "17.4.0",
     "tsup": "8.5.1",
-    "prettier": "3.8.1",
+    "prettier": "3.8.4",
     "semantic-release": "25.0.5",
     "typescript": "5.9.3",
     "vitest": "4.1.9"
