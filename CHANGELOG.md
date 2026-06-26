@@ -1,3 +1,12 @@
+## [1.0.213](https://github.com/FRSOURCE/base64/compare/v1.0.212...v1.0.213) (2026-06-26)
+
+
+### Bug Fixes
+
+* approve esbuild build scripts for pnpm v11 allowBuilds policy ([052dc06](https://github.com/FRSOURCE/base64/commit/052dc06a6845ccaea4c90a04d2afa9cd04faa388))
+* disable pnpm minimumReleaseAge policy for internal packages ([98fd539](https://github.com/FRSOURCE/base64/commit/98fd53931d51360b416f414497b6e330a0f7f26a))
+* disable pnpm v11 minimumReleaseAge policy in pnpm-workspace.yaml ([8fb0c01](https://github.com/FRSOURCE/base64/commit/8fb0c01734959648a972665e4135f77acabd8162))
+
 ## [1.0.212](https://github.com/FRSOURCE/base64/compare/v1.0.211...v1.0.212) (2026-06-26)
 
 ## [1.0.211](https://github.com/FRSOURCE/base64/compare/v1.0.210...v1.0.211) (2026-06-26)
