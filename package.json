@@ -64,6 +64,10 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "handlebars": ">=4.7.9",
+      "lodash-es": ">=4.18.1"
+    }
   }
 }
