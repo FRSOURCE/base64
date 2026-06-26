@@ -1,6 +1,6 @@
 {
   "name": "@frsource/base64",
-  "version": "1.0.210",
+  "version": "1.0.211",
   "description": "base64 encoder/decoder with UTF-8 support 📔",
   "repository": "https://github.com/FRSOURCE/base64.git",
   "homepage": "http://www.webtoolkit.info/javascript_base64.html",
@@ -48,7 +48,7 @@
     "tsup": "8.5.1",
     "prettier": "3.8.4",
     "semantic-release": "25.0.5",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vitest": "4.1.9"
   },
   "publishConfig": {
