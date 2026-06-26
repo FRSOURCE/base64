@@ -60,10 +60,5 @@
     "README.md",
     "LICENSE"
   ],
-  "funding": "https://buymeacoffee.com/frsource",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  }
+  "funding": "https://buymeacoffee.com/frsource"
 }
