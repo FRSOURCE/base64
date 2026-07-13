@@ -41,7 +41,7 @@
     "@frsource/prettier-config": "1.47.2",
     "@frsource/semantic-release-config": "1.116.4",
     "@vitest/coverage-v8": "^4.0.0",
-    "@vitest/ui": "4.1.9",
+    "@vitest/ui": "4.1.10",
     "del-cli": "7.0.0",
     "eslint": "10.6.0",
     "globals": "17.7.0",
@@ -49,7 +49,7 @@
     "prettier": "3.9.5",
     "semantic-release": "25.0.6",
     "typescript": "6.0.3",
-    "vitest": "4.1.9"
+    "vitest": "4.1.10"
   },
   "publishConfig": {
     "access": "public"
