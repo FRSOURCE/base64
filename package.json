@@ -47,7 +47,7 @@
     "globals": "17.7.0",
     "tsup": "8.5.1",
     "prettier": "3.9.5",
-    "semantic-release": "25.0.6",
+    "semantic-release": "25.0.8",
     "typescript": "6.0.3",
     "vitest": "4.1.10"
   },
