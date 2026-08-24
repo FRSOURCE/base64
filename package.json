@@ -37,8 +37,8 @@
   "license": "MIT",
   "packageManager": "pnpm@11.18.0",
   "devDependencies": {
-    "@frsource/eslint-config": "1.85.8",
-    "@frsource/prettier-config": "1.47.7",
+    "@frsource/eslint-config": "1.85.9",
+    "@frsource/prettier-config": "1.47.8",
     "@frsource/semantic-release-config": "1.116.16",
     "@vitest/coverage-v8": "^4.0.0",
     "@vitest/ui": "4.1.10",
