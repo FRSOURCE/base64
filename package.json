@@ -39,7 +39,7 @@
   "devDependencies": {
     "@frsource/eslint-config": "1.86.0",
     "@frsource/prettier-config": "1.48.0",
-    "@frsource/semantic-release-config": "1.117.1",
+    "@frsource/semantic-release-config": "1.117.3",
     "@vitest/coverage-v8": "^4.0.0",
     "@vitest/ui": "4.1.11",
     "del-cli": "7.0.0",
