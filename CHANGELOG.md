@@ -1,3 +1,5 @@
+## [1.0.247](https://github.com/FRSOURCE/base64/compare/v1.0.246...v1.0.247) (2026-10-26)
+
 ## [1.0.246](https://github.com/FRSOURCE/base64/compare/v1.0.245...v1.0.246) (2026-10-26)
 
 ## [1.0.245](https://github.com/FRSOURCE/base64/compare/v1.0.244...v1.0.245) (2026-10-19)
