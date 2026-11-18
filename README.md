@@ -55,11 +55,6 @@ decode('Pz8_Pj4-'); // output: ???>>>
 decode('YQ'); // output: a
 ```
 
-### Malformed input
-
-- `encode` / `encodeUrl` replace unpaired UTF-16 surrogates with U+FFFD (`�`), the same way `TextEncoder` does.
-- `decode` ignores characters outside of the base64 alphabets (e.g. whitespace and line breaks).
-
 ## References
 
 Based on webtoolkit.info implementation.
