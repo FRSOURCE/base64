@@ -40,7 +40,18 @@ export const encode = (input: string) => {
 };
 
 /**
+ * Encodes given string using the URL and filename safe alphabet
+ * (base64url, RFC 4648 section 5), without padding.
+ *
+ * @param {string} input - Text to encode
+ */
+export const encodeUrl = (input: string) =>
+  encode(input).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+
+/**
  * Decodes given string.
+ * Accepts both the standard and the URL safe (base64url) alphabet,
+ * with or without padding.
  *
  * @param {string} input - Text to decode
  */
@@ -48,7 +59,15 @@ export const decode = (input: string) => {
   let output = '';
   let i = 0;
 
-  input = input.replace(/[^A-Za-z0-9+/=]/g, '');
+  input = input
+    .replace(/-/g, '+')
+    .replace(/_/g, '/')
+    .replace(/[^A-Za-z0-9+/=]/g, '');
+
+  // restore omitted padding, so missing characters are not read as "A" (0)
+  while (input.length % 4) {
+    input += '=';
+  }
 
   while (i < input.length) {
     const enc1 = _keyStr.indexOf(input.charAt(i++));
@@ -59,6 +78,11 @@ export const decode = (input: string) => {
     const chr1 = (enc1 << 2) | (enc2 >> 4);
     const chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
     const chr3 = ((enc3 & 3) << 6) | enc4;
+
+    // a single leftover character carries less than one byte of data
+    if (enc2 === 64) {
+      break;
+    }
 
     output += String.fromCharCode(chr1);
 
@@ -80,8 +104,23 @@ export const decode = (input: string) => {
  * @param {string} string - Text to encode
  */
 function _utf8_encode(str: string): string {
-  return encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) =>
-    String.fromCharCode(parseInt(p1, 16)),
+  return encodeURIComponent(_to_well_formed(str)).replace(
+    /%([0-9A-F]{2})/g,
+    (_, p1) => String.fromCharCode(parseInt(p1, 16)),
+  );
+}
+
+/**
+ * (private method) replaces unpaired UTF-16 surrogates with U+FFFD,
+ * the same way TextEncoder does (encodeURIComponent throws on them)
+ *
+ * @private
+ * @param {string} str - Text to sanitize
+ */
+function _to_well_formed(str: string): string {
+  return str.replace(
+    /[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g,
+    (match) => (match.length === 2 ? match : '\uFFFD'),
   );
 }
 
