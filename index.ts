@@ -79,9 +79,9 @@ export const decode = (input: string) => {
     const chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
     const chr3 = ((enc3 & 3) << 6) | enc4;
 
-    // a single leftover character carries less than one byte of data
+    // a group with a single character carries less than one byte of data
     if (enc2 === 64) {
-      break;
+      continue;
     }
 
     output += String.fromCharCode(chr1);

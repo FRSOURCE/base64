@@ -68,6 +68,11 @@ it('should ignore a single leftover character while decoding', () => {
   expect(decode('Y')).toBe('');
 });
 
+it('should skip a group with a single character and keep decoding', () => {
+  expect(decode('Y===YQ==')).toBe('a');
+  expect(decode('====YWI=')).toBe('ab');
+});
+
 it('should decode base64url alphabet', () => {
   // standard form: "Pz8/Pj4+"
   expect(decode('Pz8_Pj4-')).toBe('???>>>');
