@@ -38,7 +38,21 @@ const { encode, decode } = require('@frsource/base64');
 const encoded = encode('我喜欢解码lubię dekodować');
 console.log(encoded); // output: 5oiR5Zac5qyi6Kej56CBbHViacSZIGRla29kb3dhxIc=
 const decoded = decode(encoded);
-console.log(encoded); // output: 我喜欢解码lubię dekodować
+console.log(decoded); // output: 我喜欢解码lubię dekodować
+```
+
+### URL safe variant (base64url)
+
+`encodeUrl` produces the URL and filename safe alphabet (`-` and `_` instead of `+` and `/`) without `=` padding. `decode` accepts both alphabets, with or without padding:
+
+```js
+import { encodeUrl, decode } from '@frsource/base64';
+
+encodeUrl('???>>>'); // output: Pz8_Pj4-  (encode gives: Pz8/Pj4+)
+encodeUrl('a'); // output: YQ  (encode gives: YQ==)
+
+decode('Pz8_Pj4-'); // output: ???>>>
+decode('YQ'); // output: a
 ```
 
 ## References
