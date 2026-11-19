@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/FRSOURCE/base64/compare/v1.0.254...v1.1.0) (2026-11-19)
+
+
+### Features
+
+* support base64url and fix decoding of unpadded input ([#299](https://github.com/FRSOURCE/base64/issues/299)) ([3d3fa8f](https://github.com/FRSOURCE/base64/commit/3d3fa8fd75f01ed1d0eb4bad207e991512f105dd)), closes [#296](https://github.com/FRSOURCE/base64/issues/296)
+
 ## [1.0.254](https://github.com/FRSOURCE/base64/compare/v1.0.253...v1.0.254) (2026-11-16)
 
 ## [1.0.253](https://github.com/FRSOURCE/base64/compare/v1.0.252...v1.0.253) (2026-11-16)
